@@ -1,0 +1,23 @@
+<table style="width: 80%; margin: 0 auto;">
+  <thead>
+    <th>No.</th>
+    <th>name</th>
+    <th>age</th>
+    <th>address</th>
+    <th>tel</th>
+    <th></th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of dataList; index as i ">
+      <td style="text-align: center">{{i + 1}}</td>
+      <td style="text-align: center">{{data.name}}</td>
+      <td style="text-align: center">{{data.age}}</td>
+      <td style="text-align: center">{{data.address}}</td>
+      <td style="text-align: center">{{data.tel}}</td>
+      <td style="text-align: center">
+        <button (click)="clickEditRow(data)">Edit</button>
+        <button (click)="clickDeleteRow(data)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

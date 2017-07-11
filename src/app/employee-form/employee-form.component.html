@@ -1,0 +1,13 @@
+<form (submit)="submitForm($event,formModel)">
+  <label for="name">  name </label>
+  <input type="text" id="name" name="name" [(ngModel)]="formModel.name">
+  <label for="age"> age </label>
+  <input type="text" id="age" name="age" [(ngModel)]="formModel.age">
+  <label for="address"> address</label>
+  <input type="text" id="address" name="address" [(ngModel)]="formModel.address">
+  <label for="tel "> tel </label>
+  <input type="text" id="tel" name="tel" [(ngModel)]="formModel.tel">
+  <button>{{ formModel.key ? 'update': 'add'}}</button>
+  <button (click)="clearForm()">Clear</button>
+</form>
+{{ formModel| json}}
